@@ -11,13 +11,13 @@ function sq() {
     if (d > 0) {
         var x = ((-b) + Math.sqrt(d)) / (2 * a);
         var y = ((-b) - Math.sqrt(d)) / (2 * a);
-        document.write("x = " + x + "<br>", "y = " + y);
+        document.write(`x = ` + x + `<br>`, `y = ` + y);
         return;
     }
 
     if (d == 0) {
         var x = ((-b) / 2 * a);
-        document.write("x = y = " + x);
+        document.write(`x = y = ` + x);
         return;
     }
 
