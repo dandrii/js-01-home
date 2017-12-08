@@ -12,6 +12,7 @@ function sq() {
         var x = ((-b) + Math.sqrt(d)) / (2 * a);
         var y = ((-b) - Math.sqrt(d)) / (2 * a);
         document.write("x = " + x + "<br>", "y = " + y);
+        return;
     }
 
     if (d == 0) {
