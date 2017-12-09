@@ -4,7 +4,7 @@ let c = parseFloat(prompt(`Enter value - c`));
 
 if (a !== 0) {
 
-    function sq(a, b, c) {
+    function sq_roots(a, b, c) {
 
         let d = (Math.pow(b, 2)) - (4 * a * c);
 
@@ -23,7 +23,7 @@ if (a !== 0) {
             return `infinite roots`
         }
     }
-    document.write(sq(a, b, c));
+    document.write(sq_roots(a, b, c));
 }
 
 else {
