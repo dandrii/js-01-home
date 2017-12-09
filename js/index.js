@@ -1,30 +1,31 @@
-let a = +parseFloat(prompt(`Enter value - a`));
+let a = parseFloat(prompt(`Enter value - a`));
+let b = parseFloat(prompt(`Enter value - b`));
+let c = parseFloat(prompt(`Enter value - c`));
+
 if (a !== 0) {
-    var b = +parseFloat(prompt(`Enter value - b`));
-    var c = +parseFloat(prompt(`Enter value - c`));
-    var d = (Math.pow(b, 2)) - (4 * a * c);
-}
-else document.write(`a must be not 0`);
 
-function sq() {
+    function sq(a, b, c) {
 
-    if (d > 0) {
-        var x = ((-b) + Math.sqrt(d)) / (2 * a);
-        var y = ((-b) - Math.sqrt(d)) / (2 * a);
-        document.write(`x = ` + x + `<br>`, `y = ` + y);
-        return;
+        let d = (Math.pow(b, 2)) - (4 * a * c);
+
+        if (d > 0) {
+            let x = ((-b) + Math.sqrt(d)) / (2 * a);
+            let y = ((-b) - Math.sqrt(d)) / (2 * a);
+            return `x = ${x}<br>y = ${y}`;
+        }
+
+        if (d == 0) {
+            let x = ((-b) / 2 * a);
+            return `x = y = ${x}`;
+        }
+
+        if (d < 0) {
+            return `infinite roots`
+        }
     }
-
-    if (d == 0) {
-        var x = ((-b) / 2 * a);
-        document.write(`x = y = ` + x);
-        return;
-    }
-
-    if (d < 0) {
-        document.write(`infinite roots`);
-        return;
-    }
+    document.write(sq(a, b, c));
 }
 
-sq(a, b, c, d);
+else {
+    document.write(`a must be not 0`);
+}
